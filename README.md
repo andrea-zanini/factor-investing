@@ -130,6 +130,9 @@ R² = 0.948
 - `notebooks/` → analysis and visualisation
 - `main.py` → full pipeline
 - `docs/technical_report.pdf` → detailed methodology
+**Note**: the `results/` folder contains only plots.
+Data files (.parquet) are excluded from the repository as they are
+fully reproducible by running `src/cleaning.py` followed by `main.py`.
 
 ---
 
