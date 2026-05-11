@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.env
+venv/
+env/
+bin/
+lib/
+include/
+share/
+pyvenv.cfg
+*.parquet
+*.xlsx
+.DS_Store

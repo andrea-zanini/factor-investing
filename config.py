@@ -1,0 +1,12 @@
+SP500_URL = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
+market_ticker = "^GSPC"
+horizon = "10y"
+time = "1d"
+threshold = 0.90
+method = "log"
+rf = 0.0367 / 252
+window = 252
+max_weight = 0.05
+tracking_error_limit = 0.04
+turnover_limit = 0.20
+cost_rate = 0.001
