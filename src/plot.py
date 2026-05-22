@@ -18,7 +18,7 @@ STYLE = {
     "rc": {
         "axes.spines.top": False,
         "axes.spines.right": False,
-        "figure.figsize": (12, 5),
+        "figure.figsize": (12, 6),
         "axes.grid": True,
         "grid.alpha": 0.4
     }
@@ -26,7 +26,7 @@ STYLE = {
 
 def cumulative_returns(portfolio_returns: pd.Series, sp500_returns: pd.Series):
     sns.set_theme(**STYLE)
-    fig, ax = plt.subplots(figsize=(12, 5))
+    fig, ax = plt.subplots()
     sns.despine()
 
     cum_portfolio = np.exp(portfolio_returns.cumsum())
@@ -47,7 +47,7 @@ def cumulative_returns(portfolio_returns: pd.Series, sp500_returns: pd.Series):
 
 def drawdown_plot(drawdown: pd.Series, sp500_returns: pd.Series):
     sns.set_theme(**STYLE)
-    fig, ax = plt.subplots(figsize=(12, 5))
+    fig, ax = plt.subplots()
     sns.despine()
 
     sp500_wealth = np.exp(sp500_returns.cumsum())
@@ -70,7 +70,7 @@ def drawdown_plot(drawdown: pd.Series, sp500_returns: pd.Series):
 
 def rolling_sharpe_plot(sharpe: pd.Series):
     sns.set_theme(**STYLE)
-    fig, ax = plt.subplots(figsize=(12, 5))
+    fig, ax = plt.subplots()
     sns.despine()
 
     sharpe_clean = sharpe.dropna()
@@ -90,7 +90,7 @@ def rolling_sharpe_plot(sharpe: pd.Series):
 
 def factor_loadings_plot(loadings: pd.Series):
     sns.set_theme(**STYLE)
-    fig, ax = plt.subplots(figsize=(10, 5))
+    fig, ax = plt.subplots()
     sns.despine()
 
     colors = ["#457b9d" if v >= 0 else "#e63946" for v in loadings.values]
