@@ -1,13 +1,26 @@
+# Virtual environment
+.venv/
+
+# Python cache
 __pycache__/
 *.py[cod]
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment variables
 .env
-venv/
-env/
-bin/
-lib/
-include/
-share/
-pyvenv.cfg
+
+# Data files
 *.parquet
 *.xlsx
-.DS_Store
+
+# Generated results
+results/
